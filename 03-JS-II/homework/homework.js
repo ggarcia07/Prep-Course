@@ -136,17 +136,16 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
-  if(num1>num2 && num1>num3 && num1>0){
-    return "Número 1 es mayor y positivo";
+  if (num1===0 || num2===0 || num3===0){
+    return "Error";
   } else if (num1<0 || num2<0 || num3<0){
     return "Hay negativos";
+  } else if (num1>num3 && num1>num2 && num1>0){
+    return "Número 1 es mayor y positivo";
   } else if (num3>num1 && num3>num2){
-    var num3_2 = num3 + 1;
-    return num3_2;
-  }else if (num1===0 || num2===0 || num3===0){
-    return "Error"
+    return (num3+1);
   }
-  return false  
+  return false
 }
 
 
@@ -165,11 +164,9 @@ function esPrimo(numero) {
       if (numero%i===0){
         return false;
       }
-      return true 
-
     } 
+    return true 
   }  
-  
 }
 
 function esVerdadero(valor){
@@ -190,7 +187,7 @@ function tablaDelSeis(){
   //Escribe tu código aquí  
   let i;
 for (i = 0; i<11; i++){
-    return (6*i);
+    console.log (6*i);
   } 
   
 }
